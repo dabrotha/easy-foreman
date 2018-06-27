@@ -1,0 +1,16 @@
+<h3> Your company is <%= @company.title %> </h3>
+
+<p>id: <%= @company.id  %> </p>
+
+<p>title: <%= @company.title %> </p>
+
+<p>description: <%= @company.description %> </p>
+
+<p>current status active? <%= @company.is_status_active %> </p>
+
+<%= simple_form_for @company do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :is_status_active %>
+  <%= f.button :submit %>
+<% end %>
