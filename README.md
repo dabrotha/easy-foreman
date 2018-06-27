@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is author's final project from his course at the CodeCore Web Development bootcamp.
 
-Things you may want to cover:
+Easy-Foreman intends to provide help to contractors in managing their projects.
 
-* Ruby version
+The rest of the readme will be updated as the project moves along.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

@@ -33,11 +33,29 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem "cancancan"
+gem 'font-awesome-rails'
+gem 'jquery-rails'
+gem 'react-rails'
+gem 'webpacker', '~> 3.5'
+gem 'simple_form'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'cowsay'
+  gem 'hirb'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'awesome_print'
+  gem 'interactive_editor'
+  gem 'faker'
+  gem 'simple_form'
 end
+
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -51,3 +69,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
