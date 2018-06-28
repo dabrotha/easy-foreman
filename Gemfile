@@ -51,6 +51,7 @@ group :development, :test do
   gem 'hirb'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'awesome_print'
+  gem 'font-awesome-rails'
   gem 'interactive_editor'
   gem 'faker'
   gem 'simple_form'
