@@ -4,31 +4,15 @@
   <%= u.input :first_name %>
   <%= u.input :last_name %>
   <%= u.input :email, placeholder: 'user@domain.com' %>
-  <%= u.input :password_digest %>
   <%= u.input :phone %>
   <%= u.input :address_street %>
   <%= u.input :address_street_number %>
   <%= u.input :address_unit_number %>
   <%= u.input :address_city %>
   <%= u.input :address_postal_code %>
-  <%= u.input :activity_status %>
-
-
-<select name="activity_status">
-  <% @activity_status_values.each do |key, value| %>
-     <option 
-        value="<%=key%>" 
-        >
-      <%= value %>
-     </option> 
-  <% end %>
-</select>
-
-
-
-
-  <%= u.input :seniority_status %>
-  <%= u.input :employment_status %>
+  <%= u.input :activity_status, collection: [['0', 'inactive'], ['1', 'active'], ['2', 'vacation']], label_method: :second, value_method: :first  %>
+  <%= u.input :seniority_status, collection: [['1', 'supervisor'], ['2', 'foreman'], ['3', 'employee']], label_method: :second, value_method: :first %>
+  <%= u.input :employment_status, collection: [['0', 'part-time'], ['1', 'full-time'], ['2', 'contract']], label_method: :second, value_method: :first %>
   <%= u.input :wage %>
   <%= u.input :job_title %>
   <%= u.input :skill_description %>

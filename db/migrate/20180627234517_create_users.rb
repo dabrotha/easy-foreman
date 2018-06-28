@@ -14,7 +14,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.integer :activity_status
       #0 - inactive, 1 - active, 2 - vacation
       t.integer :seniority_status
-      #0 - supervisor, 1 - foreman, 2 - worker, 3 - person-who-registered-company
+      #0 - user_who_registered, 1 - supervisor, 2 - foreman, 3 - worker
       t.integer :employment_status
       #0 part-time, 1 full-time, 2 - contract 
       t.float :wage

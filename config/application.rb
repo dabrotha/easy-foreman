@@ -31,10 +31,11 @@ module EasyForeman
     config.generators.system_tests = nil
 
 
-    #no helper files
     config.generators do |g|
-    #no coffeescript
-    g.helper = falseg.assets = false
-
+      #no helper files
+      g.helper = false
+      #no coffeescript
+      g.assets = false
+    end
   end
 end

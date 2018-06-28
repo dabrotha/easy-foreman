@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
 
   def index
+    @users = User.all
   end
 
   def show
+    @user = User.find params[:id]
   end
 
   def new
@@ -12,7 +14,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new user_params
-      if @user.save #this is where the user actually saves - standard way in rails
+      if @user.save
         session[:user_id] = @user.id
         render plain: "User created successfuly"
       else 
@@ -27,20 +29,17 @@ class UsersController < ApplicationController
   def edit
     @user = User.find params[:id]
  
-    @activity_status_values = {
-      "0": "inactive",
-      "1": "active",
-      "2": "on vacation"
-    }
   end
 
   def update
     @user = User.find params[:id]
-    # if @user.update
-    # render plain: "User updated"
-    # else
-    #   render plain: "User not updated"
-    # end
+    # @user.update user_params
+    if @user.update user_params 
+    render plain: "User updated"
+    else
+    render plain: "User not updated"
+    end
+
   end
 
   def index
@@ -64,7 +63,9 @@ class UsersController < ApplicationController
       :employment_status,
       :wage,
       :job_title,
-      :skill_description
+      :skill_description,
+      :password,
+      :password_confirmation
     )    
   end
 
