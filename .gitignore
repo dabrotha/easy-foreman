@@ -1,4 +1,31 @@
 
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore uploaded files in development
+/storage/*
+
+/node_modules
+/yarn-error.log
+
+/public/assets
+.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
+api_keys.rb
+
 curl https://www.gitignore.io/api/node,macos,linux > .gitignore
 
 # Created by https://www.gitignore.io/api/node,macos,linux
@@ -114,3 +141,6 @@ typings/
 /node_modules
 yarn-debug.log*
 .yarn-integrity
+
+
+/config/initializers/api_keys.rb
