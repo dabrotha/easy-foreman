@@ -26,32 +26,27 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find params[:id]
+ 
+    @activity_status_values = {
+      "0": "inactive",
+      "1": "active",
+      "2": "on vacation"
+    }
   end
 
   def update
     @user = User.find params[:id]
-    if @user.update
-    render plain: "User updated"
-    else
-      render plain: "User not updated"
-    end
+    # if @user.update
+    # render plain: "User updated"
+    # else
+    #   render plain: "User not updated"
+    # end
   end
 
   def index
     @users = User.all
   end
 
-  def edit
-    @user = User.find params[:id]
-  end
-
-
-  def update
-    @user = User.find params[:id]
-    @user.update user_params
-    # redirect_to user_path(@user)
-  end
-  
   private
   def user_params
     params.require(:user).permit(

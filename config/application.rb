@@ -29,5 +29,12 @@ module EasyForeman
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+
+    #no helper files
+    config.generators do |g|
+    #no coffeescript
+    g.helper = falseg.assets = false
+
   end
 end

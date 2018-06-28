@@ -3,7 +3,7 @@
 <%= simple_form_for @user do |u| %>
   <%= u.input :first_name %>
   <%= u.input :last_name %>
-  <%= u.input :email %>
+  <%= u.input :email, placeholder: 'user@domain.com' %>
   <%= u.input :password_digest %>
   <%= u.input :phone %>
   <%= u.input :address_street %>
@@ -12,6 +12,21 @@
   <%= u.input :address_city %>
   <%= u.input :address_postal_code %>
   <%= u.input :activity_status %>
+
+
+<select name="activity_status">
+  <% @activity_status_values.each do |key, value| %>
+     <option 
+        value="<%=key%>" 
+        >
+      <%= value %>
+     </option> 
+  <% end %>
+</select>
+
+
+
+
   <%= u.input :seniority_status %>
   <%= u.input :employment_status %>
   <%= u.input :wage %>
