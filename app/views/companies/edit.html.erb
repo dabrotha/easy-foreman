@@ -8,9 +8,9 @@
 
 <p>current status active? <%= @company.is_status_active %> </p>
 
-<%= simple_form_for @company do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :is_status_active %>
-  <%= f.button :submit %>
+<%= simple_form_for @company do |c| %>
+  <%= c.input :title %>
+  <%= c.input :description %>
+  <%= c.input :is_status_active %>
+  <%= c.button :submit %>
 <% end %>

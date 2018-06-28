@@ -1,0 +1,21 @@
+<h3>Please create a new user</h3>
+
+<%= simple_form_for @user do |u| %>
+  <%= u.input :first_name %>
+  <%= u.input :last_name %>
+  <%= u.input :email %>
+  <%= u.input :password_digest %>
+  <%= u.input :phone %>
+  <%= u.input :address_street %>
+  <%= u.input :address_street_number %>
+  <%= u.input :address_unit_number %>
+  <%= u.input :address_city %>
+  <%= u.input :address_postal_code %>
+  <%= u.input :activity_status %>
+  <%= u.input :seniority_status %>
+  <%= u.input :employment_status %>
+  <%= u.input :wage %>
+  <%= u.input :job_title %>
+  <%= u.input :skill_description %>
+  <%= u.button :submit %>
+<% end %>
