@@ -15,10 +15,17 @@
       |
       <%= link_to 'Show All Employees', companies_path %>
       |
-      <%= link_to 'Register a Company', companies_path %>
-      |
-      <%= link_to 'Login as a User', companies_path %>
-      |
+
+      <% if user_signed_in?%>
+        Hello <%= current_user.full_name %>,
+        <%= link_to "Logout", session_path, method: :delete %>
+        |
+      <% else %>
+        <%= link_to 'Login as a User', new_session_path %>
+        |
+        <%= link_to 'Register a Company', new_company_path %>
+        |
+      <% end %>
     <%= yield %>
   </body>
 </html>

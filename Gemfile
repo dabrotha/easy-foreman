@@ -55,6 +55,11 @@ group :development, :test do
   gem 'interactive_editor'
   gem 'faker'
   gem 'simple_form'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+
+
 end
 
 
