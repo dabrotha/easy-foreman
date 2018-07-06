@@ -1,7 +1,10 @@
-<h3>Please create a new company</h3>
 
-<%= simple_form_for @company do |d| %>
+<h3>Please create a new company below</h3>
+
+<%= simple_form_for @company do |c| %>
   <%= c.input :title %>
   <%= c.input :description %>
   <%= c.button :submit %>
 <% end %>
+
+

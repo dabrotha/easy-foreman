@@ -14,11 +14,20 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new user_params
+    # @company = Company.new
       if @user.save
         session[:user_id] = @user.id
-        render plain: "User created successfuly"
+        redirect_to new_company_path
+        # render plain: "User created successfuly"
+        # if @user.seniority_status == 1
+        #   redirect_to new_company_path
+        #   # @user.company_id = @company.id
+
+        # else
+          # render plain: "please make sure to have a supervisor seniority status in order to create or edit users"
+        # end
       else 
-        render :new
+        # render :new
         render plain: "User not created"
       end
     # company_params = params.require(:company).permit(:title, :description)
@@ -47,6 +56,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
     params.require(:user).permit(
       :last_name,
